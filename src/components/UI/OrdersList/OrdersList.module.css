@@ -1,0 +1,143 @@
+table {
+  border: 1px solid transparent;
+  margin: 50px auto;
+  padding: 5px 5px;
+}
+tr {
+  outline: 1px solid black;
+}
+th {
+  font-size: 30px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 10px;
+  outline: 3px solid blue;
+}
+td {
+  font-size: 18px;
+  padding: 5px;
+  background-color: wheat;
+  border: 2px solid black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.ordersCount {
+  width: 35px;
+  height: 30px;
+  text-align: center;
+}
+.events {
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+}
+.events > button {
+  padding: 5px;
+  border: 2px solid green;
+  border-radius: 5px;
+  width: 80px;
+}
+.toOrder {
+  background-color: greenyellow;
+  color: black;
+}
+.removeOrder {
+  background-color: red;
+  color: white;
+}
+.modal {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  transition: all 2s linear;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.modal-overlay {
+  width: 99vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  background: linear-gradient(black, white);
+  filter: blur(150px);
+  -webkit-filter: blur(150px);
+}
+.modal-content {
+  /* height: 500px; */
+  width: 550px;
+  padding: 15px 20px;
+  left: 450px;
+  position: absolute;
+  z-index: 9;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 15px 15px 56px black;
+}
+.modal-empty {
+  height: 500px;
+  width: 550px;
+  padding: 15px 20px;
+  left: 450px;
+  position: absolute;
+  z-index: 9;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 15px 15px 56px black;
+}
+.close-btn {
+  padding: 5px 15px;
+  border: 2px solid transparent;
+  outline: 5px solid black;
+  color: black;
+  position: absolute;
+  top: 3%;
+  font-family: sans-serif;
+  font-weight: bold;
+  width: 40px;
+  height: 30px;
+}
+.ctrls {
+  display: flex;
+  justify-content: flex-end;
+}
+.empty {
+  color: black;
+  left: 20%;
+  top: 20%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 28px;
+}
+.clear-cart-btn {
+  position: absolute;
+  top: 5px;
+  width: 120px;
+  height: 30px;
+  background-color: red;
+  color: white;
+}
+.total-price {
+  font-size: 25px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-left: 20px;
+}
+.order-all-btn {
+  margin-left: 395px;
+  padding: 5px 15px;
+  font-size: 22px;
+  background: linear-gradient(greenyellow, lightblue);
+  position: absolute;
+  margin-top: -40px;
+  border: 2px solid blue;
+  border-radius: 5px;
+  width: 120px;
+  height: 40px;
+}
+.order-all-btn:hover {
+  background: linear-gradient(lightblue, greenyellow);
+  border: 2px solid green;
+}

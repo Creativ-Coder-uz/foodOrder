@@ -1,0 +1,54 @@
+.modal {
+  position: absolute;
+  left: 0;
+  top: 50px;
+}
+.modal-overlay {
+  width: 99vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  background: linear-gradient(black, white);
+  filter: blur(150px);
+  -webkit-filter: blur(150px);
+}
+
+.modal-content {
+  /* height: 300px; */
+  width: 550px;
+  padding: 15px 20px;
+  padding-bottom: 20px;
+  left: 450px;
+  position: absolute;
+  z-index: 9;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 15px 15px 56px black;
+}
+.modal-content > video {
+  width: 100%;
+  margin-top: -33px;
+}
+.modal-content > h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+.ok-btn {
+  font-size: 22px;
+  padding: 10px 40px;
+  margin-top: 40px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.ok-btn:hover {
+  background-color: rgb(25, 194, 25);
+  outline: 2px solid blue;
+}

@@ -1,0 +1,227 @@
+.container {
+  margin-left: 104px;
+  display: flex;
+  align-items: center;
+  gap: 62px;
+}
+
+.right {
+  background: url("https://s3-alpha-sig.figma.com/img/274f/bc24/c74d318156023a0fe71cf0dab4009ace?Expires=1704672000&Signature=ojQmcDBqAQBruSvrr16Q6bdqGJ4GUVlBw6gKnHlDKvF71hS3K86OvzXvn-vE6UPJAur7Hdd9jPz0WhVtcvIcNi5LS~4Yz9pmAlF5gB3-e3PFqxJ8Ew5y98Sh5GQscVFrSfphgjhFn-FBJNx5AxtMU5boaCM3W-CRSLbpqIriDYaePvG403~EyTWfThQV1rmvT4wkYUNFEhCTOgkdRzD1l~ZyvrLwqtN4GNYmC-O8m-Hmr7XeKtaNv0zFFKFDGWLZgON4kA85dA8g5qJJ1D7PnEJpikGk4z2bRJT40yDwhieA8M~70nQQmX0TXTcWtErnboBEPE1no1kiq78Bn-XcOg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+}
+
+.univer-btn {
+  width: 179px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 40px;
+  background: #39db4a;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: 1px solid transparent;
+}
+.left {
+  width: 596px;
+  margin-top: 76px;
+  display: flex;
+  flex-direction: column;
+  gap: 59px;
+}
+.left > h1 {
+  color: #000;
+  font-family: Inter;
+  font-size: 62px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 145.523%; /* 90.224px */
+}
+.left > h1 > span {
+  color: #39db4a;
+  font-family: Inter;
+  font-size: 62px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 145.523%;
+}
+.left > p {
+  width: 622px;
+  color: #4a4a4a;
+  font-family: Inter;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 170.5%; /* 44.33px */
+}
+.other-box {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+.watch-box {
+  display: flex;
+  align-items: center;
+  gap: 29px;
+  position: relative;
+}
+.watch-box > a {
+  text-decoration: none;
+  color: #4d4d4d;
+  font-family: Inter;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.watchBoxbg {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 150px;
+}
+.watch-box > a:hover::after {
+  content: "_____________";
+  text-decoration: underline;
+  transition: all 2s linear;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 100%;
+  color: gray;
+}
+.watchBoxbg:hover,
+.watch-btn:hover {
+  cursor: pointer;
+}
+.watch-btn {
+  position: absolute;
+  left: 210px;
+  top: 0px;
+}
+
+.backbg > img {
+  margin-top: 36px;
+  width: 90%;
+  height: 500px;
+  border-radius: 25px;
+  box-shadow: 10px 10px 5px greenyellow;
+  animation: boxShadow 40s infinite;
+  -webkit-animation: boxShadow 40s infinite;
+}
+.recommendedFoods {
+  display: flex;
+  gap: 15px;
+}
+.recommendedFoods > .food {
+  margin-top: -70px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 319px;
+  height: 132px;
+  border-radius: 25px;
+  background: #fff;
+  box-shadow: 7px 35px 51px 0px rgba(0, 0, 0, 0.14);
+}
+.food:hover {
+  transform: translateY(-5px);
+  transition: 0.3s linear;
+  cursor: pointer;
+  background-color: wheat;
+}
+.food > img {
+  width: 120px;
+  height: 120px;
+  border-radius: 25px;
+}
+.food .other-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.other-items > h6 {
+  color: #2c2c2c;
+  font-family: Inter;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.other-items > .stars {
+  display: flex;
+  gap: 5px;
+}
+.other-items > p {
+  color: #515151;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.other-items > p > span {
+  color: #ff7979;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+@keyframes boxShadow {
+  0% {
+    box-shadow: 10px 10px 5px pink;
+  }
+  10% {
+    box-shadow: 10px 10px 5px red;
+  }
+  20% {
+    box-shadow: 10px 10px 5px orange;
+  }
+  30% {
+    box-shadow: 10px 10px 5px yellow;
+  }
+  40% {
+    box-shadow: 10px 10px 5px wheat;
+  }
+  50% {
+    box-shadow: 10px 10px 5px blue;
+  }
+  60% {
+    box-shadow: 10px 10px 5px lightblue;
+  }
+  70% {
+    box-shadow: 10px 10px 5px black;
+  }
+  80% {
+    box-shadow: 10px 10px 5px green;
+  }
+  90% {
+    box-shadow: 10px 10px 5px yellowgreen;
+  }
+  100% {
+    box-shadow: 10px 10px 5px white;
+  }
+}

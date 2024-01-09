@@ -1,0 +1,62 @@
+.modal {
+  position: absolute;
+  left: 0;
+  top: 50px;
+}
+.modal-overlay {
+  width: 99vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  background: linear-gradient(black, white);
+  filter: blur(150px);
+  -webkit-filter: blur(150px);
+}
+.modal-content {
+  /* height: 500px; */
+  width: 550px;
+  padding: 15px 20px;
+  left: 450px;
+  position: absolute;
+  z-index: 9;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 15px 15px 56px black;
+}
+.modal-empty {
+  height: 500px;
+  width: 550px;
+  padding: 15px 20px;
+  left: 450px;
+  position: absolute;
+  z-index: 9;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 15px 15px 56px black;
+}
+.close-btn {
+  padding: 5px 15px;
+  border: 2px solid transparent;
+  outline: 5px solid black;
+  color: black;
+  position: absolute;
+  top: 3%;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.ctrls {
+  display: flex;
+  justify-content: flex-end;
+}
+.empty {
+  color: black;
+  left: 20%;
+  top: 20%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 28px;
+}

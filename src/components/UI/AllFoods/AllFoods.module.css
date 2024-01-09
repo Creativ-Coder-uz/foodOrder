@@ -1,0 +1,19 @@
+.allFoods {
+  width: 100%;
+  margin: 60px 104px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  height: auto;
+}
+.title {
+  font-size: 46px;
+  margin-left: 504px;
+  font-family: sans-serif;
+  color: blue;
+}
