@@ -248,7 +248,8 @@ export const data = [
     name: "Gazsiz montella",
     price: 5000,
     count: 1,
-    image: "https://images.uzum.uz/cm0lr5j2psag1e8u0rv0/original.jpg",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBqPvl3A-OtZ9cwFVKQDPaJk1I264R4l3Tew&usqp=CAU",
   },
   {
     id: uuid(),
