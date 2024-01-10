@@ -1,9 +1,25 @@
 import { Link } from "react-router-dom";
 import styles from "./Register.module.css";
 import { useContext } from "react";
+import Email from "emailjs-com";
 import Context from "../../../context/Context";
 const Register = () => {
   const ctx = useContext(Context);
+
+  const SendCode = () => {
+    const username = ctx.user.username;
+    const email = ctx.user.email;
+    const mainMessage = `Assalom Aleykum, ${username}. Foodi Appda ro'yxatdan o'tish uchun tasdiqlash kodingiz: ${verifyCode}`;
+    const verifyCode = Math.floor(Math.random() * 10000);
+
+    Email.send({
+      SecureToken: "C3C0C3D22A59B3751CCA9A8623224B4FA6C7",
+      To: email,
+      From: "Foodi App",
+      Subject: "This is the subject",
+      Body: mainMessage,
+    }).then((message) => alert(message));
+  };
 
   return (
     <div className={styles["container"]}>
@@ -17,7 +33,7 @@ const Register = () => {
             placeholder="Enter your name"
             required
             onBlur={(e) => {
-              ctx.setUser({ firstName: e.target.value });
+              ctx.setUser({ username: e.target.value });
             }}
           />
         </div>
@@ -47,16 +63,13 @@ const Register = () => {
             placeholder="Confirm password"
             required
             onBlur={(e) => {
-              ctx.setUser({ ...ctx.user, cPassword: e.target.value });
+              ctx.setUser({ ...ctx.user, confirmPassword: e.target.value });
             }}
           />
         </div>
         <div className={styles["input-box"]}>
           <Link to="/home">
-            <button
-              type="button"
-              disabled={ctx.user.password === ctx.user.cPassword ? false : true}
-            >
+            <button type="button" onClick={SendCode}>
               Register Now
             </button>
           </Link>
