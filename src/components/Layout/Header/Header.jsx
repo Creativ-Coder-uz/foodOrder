@@ -1,4 +1,4 @@
-import styles from "./header.module.css";
+import styles from "./Header.module.css";
 import backbg from "../../../assets/images/backImg.png";
 import watchIcon from "../../../assets/icons/watchIcon.svg";
 import watchBoxBg from "../../../assets/icons/watchBoxbg.svg";
