@@ -23,7 +23,7 @@ const Header = () => {
           <div className={styles["other-box"]}>
             <button className={styles["univer-btn"]}>Order now</button>
             <div className={styles["watch-box"]}>
-              <a href="https://youtu.be/I_C9aFyL_qg?si=e_YZJiL34GVk0jv-">
+              <a href="https://youtu.be/0xCzQRvA9jE?si=OGaZEwsh5REcjgN2">
                 Watch Video{" "}
               </a>
 
