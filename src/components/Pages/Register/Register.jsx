@@ -1,26 +1,18 @@
 import { Link } from "react-router-dom";
 import styles from "./Register.module.css";
-import { useContext } from "react";
-import Email from "emailjs-com";
+import { useContext, useState } from "react";
 import Context from "../../../context/Context";
 const Register = () => {
   const ctx = useContext(Context);
-
-  const SendCode = () => {
-    const username = ctx.user.username;
-    const email = ctx.user.email;
-    const mainMessage = `Assalom Aleykum, ${username}. Foodi Appda ro'yxatdan o'tish uchun tasdiqlash kodingiz: ${verifyCode}`;
-    const verifyCode = Math.floor(Math.random() * 10000);
-
-    Email.send({
-      SecureToken: "C3C0C3D22A59B3751CCA9A8623224B4FA6C7",
-      To: email,
-      From: "Foodi App",
-      Subject: "This is the subject",
-      Body: mainMessage,
-    }).then((message) => alert(message));
+  const [noVerify, setVerify] = useState(true);
+  const checker = (username, email, password, confirmPassword) => {
+    if (!username || !email || !password || password !== confirmPassword) {
+      setVerify(true);
+      alert("error");
+    } else {
+      setVerify(false);
+    }
   };
-
   return (
     <div className={styles["container"]}>
       <h2>
@@ -32,7 +24,7 @@ const Register = () => {
             type="text"
             placeholder="Enter your name"
             required
-            onBlur={(e) => {
+            onChange={(e) => {
               ctx.setUser({ username: e.target.value });
             }}
           />
@@ -42,7 +34,7 @@ const Register = () => {
             type="text"
             placeholder="Enter your email"
             required
-            onBlur={(e) => {
+            onChange={(e) => {
               ctx.setUser({ ...ctx.user, email: e.target.value });
             }}
           />
@@ -52,7 +44,7 @@ const Register = () => {
             type="password"
             placeholder="Create password"
             required
-            onBlur={(e) => {
+            onChange={(e) => {
               ctx.setUser({ ...ctx.user, password: e.target.value });
             }}
           />
@@ -62,14 +54,26 @@ const Register = () => {
             type="password"
             placeholder="Confirm password"
             required
-            onBlur={(e) => {
+            onChange={(e) => {
               ctx.setUser({ ...ctx.user, confirmPassword: e.target.value });
             }}
           />
         </div>
         <div className={styles["input-box"]}>
-          <Link to="/home">
-            <button type="button" onClick={SendCode}>
+          <Link to={noVerify ? "/register" : "/home"}>
+            <button
+              // disabled={noVerify}
+              type="button"
+              title="ro'yxatdan o'tish uchun 2 marta bosing"
+              onClick={() => {
+                checker(
+                  ctx.user.username,
+                  ctx.user.email,
+                  ctx.user.password,
+                  ctx.user.confirmPassword
+                );
+              }}
+            >
               Register Now
             </button>
           </Link>

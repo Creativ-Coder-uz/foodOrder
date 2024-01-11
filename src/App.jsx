@@ -2,18 +2,20 @@ import "./App.css";
 import Layout from "./components/Layout/Layout";
 import AllFoods from "./components/UI/AllFoods/AllFoods";
 import Context from "./context/Context";
-import { useState } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Register from "./components/Pages/Register/Register";
+import { useContext, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NotFound from "./components/Pages/NotFound/NotFound";
 import Login from "./components/Pages/Login/Login";
+import Header from "./components/Layout/Header/Header";
+import { element } from "prop-types";
 
 function App() {
+  const ctx = useContext(Context);
   const [orders, setOrders] = useState([]);
   const [openModal, setOpenModal] = useState(false);
   const [ordersCount, setOrdersCount] = useState(1);
   const [successModal, setSuccessModal] = useState(false);
-  const [user, setUser] = useState({});
+  const [isVerify, setVerify] = useState(false);
   return (
     <Context.Provider
       value={{
@@ -25,22 +27,14 @@ function App() {
         setOrdersCount,
         successModal,
         setSuccessModal,
-        user,
-        setUser,
+        isVerify,
+        setVerify,
       }}
     >
       <>
         <BrowserRouter>
           <Routes>
-            <Route
-              path="/"
-              element={
-                <Layout>
-                  <AllFoods />
-                </Layout>
-              }
-            />
-            <Route path="/register" element={<Register />} />
+            <Route path="/" element={<Header />} />
             <Route
               path="/home"
               element={

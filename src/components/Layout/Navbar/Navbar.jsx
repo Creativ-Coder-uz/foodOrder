@@ -29,7 +29,7 @@ const Navbar = () => {
       </h1>
       <ul className={styles["menu"]}>
         <li>
-          <Link to="/home">Home</Link>
+          <a href={ctx.isVerify ? "/home" : ""}>Home</a>
         </li>
         <li>
           Menu <img src={downIcon} alt="" />
@@ -52,7 +52,7 @@ const Navbar = () => {
           {ctx.orders.length < 1 ? "" : ctx.orders.length}
         </span>
         <button className={styles["univer-btn"]}>
-          <Link to="/login">Log Out</Link>
+          <Link to="/login">{ctx.isVerify ? "Log Out" : "Login"}</Link>
         </button>
       </div>
     </div>

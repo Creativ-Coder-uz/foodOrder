@@ -43,6 +43,9 @@ h2 > strong {
 .container form .input-box {
   height: 52px;
   margin: 18px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 form .input-box input {
   height: 100%;
@@ -57,11 +60,11 @@ form .input-box input {
   border-radius: 6px;
   transition: all 0.3s ease;
 }
-button {
-  width: 100%;
-  height: 100%;
+.login-btn {
+  margin-top: 35px;
+  width: 93%;
+  height: 40px;
   outline: none;
-  padding: 0 15px;
   font-size: 17px;
   font-weight: 400;
   color: #333;
@@ -71,7 +74,6 @@ button {
   transition: all 0.3s ease;
 }
 .input-box input:focus,
-.input-box button,
 .input-box input:valid {
   border-color: #4070f4;
 }
@@ -81,15 +83,17 @@ form h3 {
   font-weight: 500;
   margin-left: 10px;
 }
-.input-box > button {
+.login-btn {
   color: #fff;
   letter-spacing: 1px;
   border: none;
-  background: #4070f4;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
-.input-box > button:hover {
-  background: #0e4bf1;
+button {
+  width: 99%;
+  height: 120%;
+  border: none;
+  border-radius: 10px;
 }
 form .text h3 {
   color: #333;
@@ -103,4 +107,20 @@ form .text h3 a {
 }
 form .text h3 a:hover {
   text-decoration: underline;
+}
+.error {
+  background-color: rgb(255, 242, 217);
+}
+.true {
+  background-color: rgb(208, 255, 137);
+}
+.offBtn {
+  background-color: gray;
+  color: white;
+  cursor: not-allowed;
+}
+
+.onBtn {
+  background-color: #0e4bf1;
+  color: white;
 }

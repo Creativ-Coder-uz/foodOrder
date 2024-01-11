@@ -4,60 +4,68 @@ import { useContext, useState } from "react";
 import Context from "../../../context/Context";
 
 const Login = () => {
-  const [userLogin, setUserLogin] = useState([]);
-  const [isVerify, setIsVerify] = useState(false);
   const ctx = useContext(Context);
-  const checker = () => {
-    if (ctx.user.firstName !== userLogin[0]) {
-      setIsVerify(true);
-      console.log(isVerify);
-    }
-  };
+  const [trueLogin, setLogin] = useState(false);
+  const [truePassword, setPassword] = useState(false);
   return (
     <>
       <div className={styles["container"]}>
         <h2>
           <strong>FOODI</strong> Login
         </h2>
-        <form>
+        <form
+          onChange={() => {
+            {
+              trueLogin && truePassword
+                ? ctx.setVerify(true)
+                : ctx.setVerify(false);
+            }
+          }}
+        >
           <div className={styles["input-box"]}>
             <input
               type="text"
-              placeholder="Enter your name"
+              placeholder="Enter username"
               required
-              onBlur={(e) => {
-                setUserLogin((prev) => [...prev, e.target.value]);
+              onInput={(e) => {
+                e.target.value.length > 2 ? setLogin(true) : setLogin(false);
               }}
+              className={styles[trueLogin ? "true" : "error"]}
             />
+            <span>{trueLogin ? "✅" : "❌"}</span>
           </div>
           <div className={styles["input-box"]}>
             <input
               type="password"
               placeholder="Enter your password"
               required
-              onBlur={(e) => {
-                setUserLogin((prev) => [...prev, e.target.value]);
+              onInput={(e) => {
+                e.target.value.length > 8
+                  ? setPassword(true)
+                  : setPassword(false);
               }}
+              className={styles[truePassword ? "true" : "error"]}
             />
+            <span>{truePassword ? "✅" : "❌"}</span>
           </div>
-          <div className={styles["input-box"]}>
-            <Link to="/home">
+          <div className={styles["login-btn"]}>
+            <Link to={"/home"}>
               <button
                 type="button"
-                onClick={() => {
-                  checker();
-                }}
-                // disabled={true}
+                className={
+                  styles[trueLogin && truePassword ? "onBtn" : "offBtn"]
+                }
+                disabled={trueLogin && truePassword ? false : true}
               >
                 Login Now
               </button>
             </Link>
           </div>
-          <div className={styles["text"]}>
+          {/* <div className={styles["text"]}>
             <h3>
               haven't an account? <Link to="/register">Register now</Link>
             </h3>
-          </div>
+          </div> */}
         </form>
       </div>
     </>
