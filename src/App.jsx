@@ -34,7 +34,7 @@ function App() {
       <>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Header />} />
+            <Route path="/" element={<Login />} />
             <Route
               path="/home"
               element={
@@ -43,8 +43,8 @@ function App() {
                 </Layout>
               }
             />
-            <Route path="*" element={<NotFound />} />
             <Route path="/login" element={<Login />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
       </>
