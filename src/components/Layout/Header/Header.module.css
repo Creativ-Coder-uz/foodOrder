@@ -170,26 +170,194 @@
   line-height: normal;
 }
 
-/* 
+/* ===================================================== RESPONSIVE =================================  */
+@media (max-width: 1450px) {
+  .container {
+    margin-left: 80px;
+    gap: 40px;
+  }
+}
+@media (max-width: 1400px) {
+  .recommendedFoods {
+    gap: 15px;
+  }
+  .recommendedFoods > .food {
+    width: 280px;
+  }
+}
+@media (max-width: 1300px) {
+  .recommendedFoods {
+    gap: 10px;
+  }
+  .recommendedFoods > .food {
+    visibility: hidden;
+  }
+}
+@media (max-width: 1200px) {
+  .container {
+    gap: 10px;
+  }
+  .left {
+    width: 570px;
+  }
+  .right > .backbg {
+    width: 540px;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+  .left {
+    width: 596px;
+  }
+  .right > .backbg {
+    width: 900px;
+  }
+  .recommendedFoods {
+    gap: 55px;
+  }
+  .recommendedFoods > .food {
+    visibility: visible;
+    width: 359px;
+  }
+}
+@media (max-width: 800px) {
+  .right > .backbg {
+    width: 790px;
+  }
+  .recommendedFoods {
+    gap: 10px;
+  }
+  .recommendedFoods > .food {
+    width: 335px;
+  }
+}
+@media (max-width: 700px) {
+  .left {
+    margin-left: -50px;
+  }
+  .right > .backbg {
+    width: 690px;
+  }
+  .recommendedFoods {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .left {
+    gap: 15px;
+  }
+  .left > h1 {
+    font-size: 50px;
+    margin-left: 50px;
+  }
+  .left > p {
+    font-size: 20px;
+    width: 500px;
+    margin-left: 80px;
+  }
+  .left > .other-box {
+    margin-left: 50px;
+  }
+  .right > .backbg {
+    width: 590px;
+    margin-left: -15px;
+  }
+}
+@media (max-width: 500px) {
+  .left {
+    gap: 15px;
+  }
+  .left > h1 {
+    font-size: 40px;
+    margin-left: 100px;
+  }
+  .left > .other-box {
+    margin-left: 100px;
+  }
+  .left > .other-box .watch-box > img {
+    display: none;
+  }
+  .right > .backbg {
+    width: 490px;
+    margin-left: -25px;
+  }
+}
+@media (max-width: 475px) {
+  .left {
+    gap: 15px;
+  }
+  .left > h1 {
+    font-size: 40px;
+  }
+  .left > p {
+    margin-left: 120px;
+    font-size: 16px;
+    width: 400px;
+  }
+  .left > .other-box {
+    margin-left: 95px;
+  }
+  .left > .other-box .watch-box > img {
+    display: none;
+  }
+  .right > .backbg {
+    visibility: hidden;
+  }
+  .recommendedFoods {
+    display: flex;
+    flex-direction: column;
+    margin-top: -500px;
+    gap: 100px;
+    margin-left: -80px;
+    background-color: red;
+    padding: 100px;
+  }
+}
+@media (max-width: 425px) {
+  .left > h1 {
+    font-size: 38px;
+  }
+  .left > p {
+    margin-left: 120px;
+    font-size: 16px;
+    width: 400px;
+  }
+  .left > .other-box {
+    margin-left: 95px;
+  }
+  .recommendedFoods {
+    margin-left: -85px;
+  }
+}
+@media (max-width: 400px) {
+  .container {
+    margin-left: 110px;
+  }
+  .left > h1 {
+    font-size: 35px;
+  }
+  .left > p {
+    font-size: 14px;
+    width: 305px;
+  }
+  .left > .other-box {
+    gap: 15px;
+  }
+  .recommendedFoods {
+    margin-left: -100px;
+  }
+}
+@media (max-width: 375px) {
+  .left > .other-box {
+    flex-direction: column;
+    margin-left: -50px;
+  }
+}
 
+/*  */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*/
 @keyframes boxShadow {
   0% {
     box-shadow: 10px 10px 5px pink;

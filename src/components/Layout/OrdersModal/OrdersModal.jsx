@@ -1,8 +1,6 @@
-// import { useState } from "react";
 import { useContext } from "react";
 import Context from "../../../context/Context";
 import styles from "./OrdersModal.module.css";
-// import emptyImg from "../../../assets/images/empty.png";
 
 const OrdersModal = (props) => {
   const ctx = useContext(Context);

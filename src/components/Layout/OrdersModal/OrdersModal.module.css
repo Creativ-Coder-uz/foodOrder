@@ -15,7 +15,6 @@
   -webkit-filter: blur(150px);
 }
 .modal-content {
-  /* height: 500px; */
   width: 550px;
   padding: 15px 20px;
   left: 450px;
@@ -59,4 +58,70 @@
   flex-direction: column;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 28px;
+}
+
+@media (max-width: 1400px) {
+  .modal {
+    left: -25px;
+  }
+}
+@media (max-width: 1300px) {
+  .modal {
+    left: -100px;
+  }
+}
+@media (max-width: 1200px) {
+  .modal {
+    left: -165px;
+  }
+}
+@media (max-width: 1024px) {
+  .modal {
+    left: -220px;
+  }
+}
+@media (max-width: 900px) {
+  .modal {
+    left: -290px;
+  }
+}
+@media (max-width: 800px) {
+  .modal {
+    left: -340px;
+  }
+}
+@media (max-width: 768px) {
+  .modal {
+    left: -355px;
+  }
+}
+@media (max-width: 700px) {
+  .modal {
+    left: -395px;
+  }
+}
+@media (max-width: 500px) {
+  .modal {
+    left: -420px;
+  }
+}
+@media (max-width: 475px) {
+  .modal {
+    left: -433px;
+  }
+}
+@media (max-width: 425px) {
+  .modal {
+    left: -433px;
+  }
+}
+@media (max-width: 400px) {
+  .modal {
+    left: -445px;
+  }
+}
+@media (max-width: 375px) {
+  .modal {
+    left: -435px;
+  }
 }

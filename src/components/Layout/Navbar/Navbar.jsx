@@ -5,13 +5,18 @@ import downIcon from "../../../assets/icons/down.svg";
 import searchIcon from "../../../assets/icons/search.svg";
 import OrderBagIcon from "../../../assets/icons/korzina.svg";
 import successIcon from "../../../assets/successIcon.mp4";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import Context from "../../../context/Context";
 import OrdersList from "../../UI/OrdersList/OrdersList";
 import SuccessModal from "../OrdersModal/SuccesModal/SuccesModal";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const navRef = useRef();
+  const showMenu = () => {
+    navRef.current.classList.toggle("responsive_nav");
+    console.log(navRef);
+  };
   const ctx = useContext(Context);
   const toggleModal = () => {
     ctx.setOpenModal(!ctx.openModal);
@@ -27,7 +32,7 @@ const Navbar = () => {
         <img className={styles["F_icon"]} src={F_Icon} alt="" />{" "}
         <img className={styles["oodiIcon"]} src={oodiIcon} alt="" />
       </h1>
-      <ul className={styles["menu"]}>
+      <ul ref={navRef}>
         <li>
           <a>Home</a>
         </li>
@@ -39,6 +44,12 @@ const Navbar = () => {
           <img src={downIcon} alt="" />
         </li>
         <li>Offers</li>
+        <Link to="/login">
+          <button className={styles["univer-btn"]}>Log Out</button>
+        </Link>
+        <span onClick={showMenu} className={styles["x-btn"]}>
+          X
+        </span>
       </ul>
       <div className={styles["menu-btns"]}>
         <img src={searchIcon} alt="" />
@@ -51,9 +62,14 @@ const Navbar = () => {
         <span className={ctx.orders.length > 0 ? styles["ordersCount"] : ""}>
           {ctx.orders.length < 1 ? "" : ctx.orders.length}
         </span>
-        <button className={styles["univer-btn"]}>
-          <Link to="/login">Log Out</Link>
-        </button>
+
+        <Link to="/login">
+          <button className={styles["univer-btn"]}>Log Out</button>
+        </Link>
+
+        <span className={styles["burger-btn"]} onClick={showMenu}>
+          ☰
+        </span>
       </div>
     </div>
   );
