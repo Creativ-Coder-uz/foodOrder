@@ -64,7 +64,6 @@ td {
   -webkit-filter: blur(150px);
 }
 .modal-content {
-  /* height: 500px; */
   width: 550px;
   padding: 15px 20px;
   left: 450px;
@@ -143,6 +142,9 @@ td {
 }
 
 @media (max-width: 600px) {
+  table {
+    margin-left: -10px;
+  }
   .modal-empty {
     width: 450px;
     height: 400px;
@@ -150,11 +152,38 @@ td {
   .empty {
     margin-left: -25px;
   }
+  .modal-content {
+    width: 450px;
+  }
+  .order-all-btn {
+    left: -35px;
+  }
   .empty > img {
     width: 300px;
   }
+  td {
+    padding: 0px;
+    /* font-size: 15px; */
+    text-align: center;
+  }
 }
 @media (max-width: 500px) {
+  table {
+    padding: 0;
+    margin-left: 5px;
+  }
+  th {
+    padding: 3px;
+    font-size: 19px;
+  }
+  td {
+    font-size: 15px;
+    padding: 4px 8px;
+    border: none;
+  }
+  .total-price {
+    font-size: 20px;
+  }
   .modal-empty {
     width: 400px;
     height: 400px;
@@ -162,6 +191,14 @@ td {
   .empty {
     margin-left: -45px;
   }
+  .modal-content {
+    width: 420px;
+  }
+  .order-all-btn {
+    left: -85px;
+  }
+}
+@media (max-width: 475px) {
 }
 @media (max-width: 425px) {
   .modal-empty {
@@ -181,5 +218,8 @@ td {
   .empty {
     margin-left: -45px;
     font-size: 25px;
+  }
+  .modal-content {
+    width: 300px;
   }
 }
