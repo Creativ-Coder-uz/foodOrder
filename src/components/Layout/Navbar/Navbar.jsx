@@ -15,7 +15,7 @@ const Navbar = () => {
   const navRef = useRef();
   const showMenu = () => {
     navRef.current.classList.toggle("responsive_nav");
-    console.log(navRef);
+    // console.log(navRef);
   };
   const ctx = useContext(Context);
   const toggleModal = () => {
@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <div className={styles["navbar"]}>
       <SuccessModal>
-        =<video src={successIcon} autoPlay></video>
+        <video src={successIcon} autoPlay></video>
         <h1>Buyurtmangiz qabul qilindi!</h1>
       </SuccessModal>
       <OrdersList />

@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\Layout",
+    "\\src\\components\\Layout\\Navbar",
+    "\\src\\components\\Layout\\OrdersModal",
+    "\\src\\components\\Layout\\OrdersModal\\SuccesModal"
+  ],
+  "SelectedNode": "\\src\\components\\Layout\\OrdersModal\\SuccesModal\\SuccesModal.module.css",
+  "PreviewInSolutionExplorer": false
+}
